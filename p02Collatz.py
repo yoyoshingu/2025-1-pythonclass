@@ -5,15 +5,32 @@
 #      n이 홀수 -> 3 * n + 1
 #  예: 5 -> 16 -> 8 -> 4 -> 2 -> 1   (5단계)
 
-n = 99
+n = 9
 
-# 단계의 갯수를 셀것
+# 단계의 갯수를 셀것 - done
 # n을 1부터 99까지 변화하면서, 각각의  단계수를 출력할 것
 # 그중 가장 큰 수를 찾을 것
+# n=97: 118번만에 1로 도달
+# n=73: 115번만에 1로 도달
 
-while n!= 1:
-    if n % 2 == 1:
-        n = 3 * n + 1
-    else:
-      n = n / 2
-    print(n)
+maxvalue = 0
+maxvaluen =0
+
+for n in range(1,100):
+    # print(f'{n=}')
+    ncount = 0
+    i = n
+
+    while i!= 1:
+        if i % 2 == 1:
+            i = 3 * i + 1
+        else:
+          i = i / 2
+        ncount = ncount + 1
+
+    print(f'{ncount}')
+    if maxvalue < ncount:
+        maxvalue = ncount
+        maxvaluen = n
+
+print(f'{maxvalue=}, {maxvaluen=}')
