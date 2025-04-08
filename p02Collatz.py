@@ -13,10 +13,12 @@ n = 9
 # n=97: 118번만에 1로 도달
 # n=73: 115번만에 1로 도달
 
-maxvalue = 0
-maxvaluen =0
+maxvalue1 = -100
+maxvalue2 = -100
+maxvaluen1 = 0
+maxvaluen2 = 0
 
-for n in range(1,100):
+for n in range(1,100000):
     # print(f'{n=}')
     ncount = 0
     i = n
@@ -29,8 +31,14 @@ for n in range(1,100):
         ncount = ncount + 1
 
     print(f'{ncount}')
-    if maxvalue < ncount:
-        maxvalue = ncount
-        maxvaluen = n
+    if maxvalue1  < ncount:
+        maxvalue2 = maxvalue1
+        maxvalue1 = ncount
+        maxvaluen2 = maxvaluen1
+        maxvaluen1 = n
+    elif maxvalue2 < ncount:
+        maxvalue2 = ncount
+        maxvaluen2 = n
 
-print(f'{maxvalue=}, {maxvaluen=}')
+print(f'{maxvalue1=}, {maxvaluen1=}')
+print(f'{maxvalue2=}, {maxvaluen2=}')
