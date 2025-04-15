@@ -30,9 +30,10 @@ for n in range(1,MAXNUM):
 
 # print(ncountl)
 # print(sum(ncountl) / len(ncountl))
-
+nmax = 0
 # 최대값, 평균, 중앙값, 표준편차, 최빈값,
 print(f'최대값={max(ncountl)}')
+print(f'해당숫자={ncountl.index(max(ncountl))+1}')
 print(f'평균={statistics.mean(ncountl):.5f}')
 print(f'중앙값={statistics.median(ncountl)}')
 # print(f'최빈값 = {statistics.mode(ncountl):.5f}')
@@ -53,6 +54,7 @@ for n in range(1,MAXNUM):
 
 # # 최대값, 평균, 중앙값, 표준편차, 최빈값,
 print(f'최대값={np.max(ncounta)}')
+print(f'해당숫자{nmax}')
 print(f'평균= {np.mean(ncounta):.5f}')
 print(f'중앙값={np.median(ncounta)}')
 print(f'표준편차 ={np.std(ncounta):.5f}')

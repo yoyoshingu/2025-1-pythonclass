@@ -18,7 +18,7 @@ maxvalue2 = -100
 maxvaluen1 = 0
 maxvaluen2 = 0
 
-for n in range(1,100000):
+for n in range(1,100):
     # print(f'{n=}')
     ncount = 0
     i = n
